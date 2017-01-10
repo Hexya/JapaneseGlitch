@@ -1,0 +1,756 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+:root {
+  --blue:#00FFFF;
+  --pink:#FF00FF;
+}
+
+/*.path {
+  stroke-dasharray: 9000;
+  stroke-dashoffset: 9000;
+  animation: dash 10s ease-in-out forwards;
+  visibility:hidden.5;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}*/
+
+.container {
+  visibility: hidden;
+  height: 100vh;
+  width: 100%;
+  background-color:white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container > * {
+  visibility: visible;
+  transition: opacity 350ms ease-in-out 100ms;
+}
+
+.container:hover > * {
+  visibility: visible;
+}
+
+.circle1 {
+  visibility: hidden;
+  position: absolute;
+  height: 300px;
+  width:300px;
+  border-radius: 50%;
+  background-color: var(--blue);
+  -webkit-animation: moove 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moove 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moove 0.15s infinite; /* Opera 12+ */
+  animation:         moove 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.circle2 {
+  visibility: hidden;
+  position: absolute;
+  height: 300px;
+  width:300px;
+  border-radius: 50%;
+  background-color: var(--pink);
+  -webkit-animation: moove2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moove2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moove2 0.15s infinite; /* Opera 12+ */
+  animation:         moove2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.circle3 {
+  position: absolute;
+  height: 300px;
+  width:300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-animation: color 2s infinite ease-out; /* Safari 4+ */
+  -moz-animation:    color 2s infinite ease-out; /* Fx 5+ */
+  -o-animation:      color 2s infinite ease-out; /* Opera 12+ */
+  animation:         color 2s infinite ease-out; /* IE 10+, Fx 29+ */
+}
+
+.comeText {
+  font-size: 35px;
+  font-family:'YuMincho';
+  /*font-family: 'Kaushan Script', cursive;*/
+  /*font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+  -webkit-animation: colorText 2s infinite ease-out; /* Safari 4+ */
+  -moz-animation:    colorText 2s infinite ease-out; /* Fx 5+ */
+  -o-animation:      colorText 2s infinite ease-out; /* Opera 12+ */
+  animation:         colorText 2s infinite ease-out; /* IE 10+, Fx 29+ */
+}
+.textJap {
+  position: absolute;
+  color: black;
+  font-size: 70px;
+}
+.textJap2 {
+  position: absolute;
+  color: black;
+  font-size: 120px;
+  margin-left: -15vh;
+}
+.marge1 {
+  position: absolute;
+  height: 620px;
+  width: 1220px;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  visibility:hidden;
+  z-index: -1;
+  -webkit-animation: mooveborder1 0.15s infinite;
+  -moz-animation:    mooveborder1 0.15s infinite;
+  -o-animation:      mooveborder1 0.15s infinite;
+  animation:         mooveborder1 0.15s infinite;
+}
+.marge2 {
+  position: absolute;
+  height: 620px;
+  width: 1220px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  visibility:hidden;
+  z-index: -1;
+  -webkit-animation: mooveborder2 0.15s infinite;
+  -moz-animation:    mooveborder2 0.15s infinite;
+  -o-animation:      mooveborder2 0.15s infinite;
+  animation:         mooveborder2 0.15s infinite;
+}
+.text {
+  visibility:hidden
+}
+.textHead1 {
+  position: absolute;
+  font-size: 30px;
+  left: 22%;
+  top:25%;
+  color: var(--pink);
+  -webkit-animation: moovetext1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moovetext1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moovetext1 0.15s infinite; /* Opera 12+ */
+  animation:         moovetext1 0.15s infinite; /* IE 10+, Fx 29+ */
+  z-index: 0;
+}
+.textHead2 {
+  position: absolute;
+  font-size: 30px;
+  left: 22%;
+  top:25%;
+  color: var(--blue);
+  -webkit-animation: moovetext2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moovetext2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moovetext2 0.15s infinite; /* Opera 12+ */
+  animation:         moovetext2 0.15s infinite; /* IE 10+, Fx 29+ */
+  z-index: 0;
+}
+.textHead3 {
+  position: absolute;
+  font-size: 30px;
+  left: 22%;
+  top:25%;
+  color: white;
+  z-index: 0;
+}
+.text1 {
+  position: absolute;
+  font-size: 30px;
+  left: 70%;
+  top:70%;
+  color: var(--pink);
+  -webkit-animation: moovetext1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moovetext1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moovetext1 0.15s infinite; /* Opera 12+ */
+  animation:         moovetext1 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.text2 {
+  position: absolute;
+  font-size: 30px;
+  left: 70%;
+  top:70%;
+  color: var(--blue);
+  -webkit-animation: moovetext2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moovetext2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moovetext2 0.15s infinite; /* Opera 12+ */
+  animation:         moovetext2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.text3 {
+  position: absolute;
+  font-size: 30px;
+  left: 70%;
+  top:70%;
+  color: white;
+}
+.textLeft {
+  position: absolute;
+  visibility: hidden;
+  font-family: 'Roboto', sans-serif;
+  margin-top: -15vh;
+  margin-left: -35vh;
+}
+.textTop {
+  position: absolute;
+  visibility: hidden;
+  font-family:'YuMincho';
+  margin-top: -49vh;
+  margin-left: -65vh;
+  font-size: 20px;
+}
+.textBot {
+  position: absolute;
+  visibility: hidden;
+  font-family:'YuMincho';
+  margin-top: 47.5vh;
+  margin-left: 79vh;
+  font-size: 10px;
+}
+.textSide {
+  visibility: hidden;
+  position: absolute;
+  font-family:'YuMincho';
+  margin-top: 27vh;
+  margin-left: -92.5vh;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.sideBar1 {
+  visibility:hidden;
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  height: 35vh;
+  width:1.8%;
+  background-color: var(--blue);
+  -webkit-animation: mooveborder1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder1 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder1 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar1bis {
+  visibility:hidden;
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  height: 35vh;
+  width:1.8%;
+  background-color: var(--pink);
+  -webkit-animation: mooveborder2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder2 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar1bis2 {
+  visibility:hidden;
+  position: absolute;
+  top: 15%;
+  left: 75%;
+  height: 35vh;
+  width:1.8%;
+  background-color: black;
+}
+.sideBar2 {
+  visibility:hidden;
+  position: absolute;
+  top: 5%;
+  left: 78%;
+  height: 35vh;
+  width:1.8%;
+  background-color: var(--blue);
+  -webkit-animation: mooveborder1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder1 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder1 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar2bis {
+  visibility:hidden;
+  position: absolute;
+  top: 5%;
+  left: 78%;
+  height: 35vh;
+  width:1.8%;
+  background-color: var(--pink);
+  -webkit-animation: mooveborder2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder2 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar2bis2 {
+  visibility:hidden;
+  position: absolute;
+  top: 5%;
+  left: 78%;
+  height: 35vh;
+  width:1.8%;
+  background-color: black;
+}
+.sideBar3 {
+  visibility:hidden;
+  position: absolute;
+  top: 10%;
+  left: 81%;
+  height: 55vh;
+  width:1.8%;
+  background-color: var(--blue);
+  -webkit-animation: mooveborder1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder1 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder1 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar3bis {
+  visibility:hidden;
+  position: absolute;
+  top: 10%;
+  left: 81%;
+  height: 55vh;
+  width:1.8%;
+  background-color: var(--pink);
+  -webkit-animation: mooveborder2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder2 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar3bis2 {
+  visibility:hidden;
+  position: absolute;
+  top: 10%;
+  left: 81%;
+  height: 55vh;
+  width:1.8%;
+  background-color: black;
+}
+.sideBar4 {
+  visibility:hidden;
+  position: absolute;
+  top: 15%;
+  left: 84%;
+  height: 17vh;
+  width:1.8%;
+  background-color: var(--blue);
+  -webkit-animation: mooveborder1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder1 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder1 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar4bis {
+  visibility:hidden;
+  position: absolute;
+  top: 15%;
+  left: 84%;
+  height: 17vh;
+  width:1.8%;
+  background-color: var(--pink);
+  -webkit-animation: mooveborder2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    mooveborder2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      mooveborder2 0.15s infinite; /* Opera 12+ */
+  animation:         mooveborder2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBar4bis2 {
+  visibility:hidden;
+  position: absolute;
+  top: 15%;
+  left: 84%;
+  height: 17vh;
+  width:1.8%;
+  background-color: black;
+}
+.sideBarPer {
+  visibility:hidden;
+  position: absolute;
+  top:25%;
+  left: 70%;
+  height: 5vh;
+  width: 29%;
+  background-color: var(--blue);
+  -webkit-animation: moovetext1 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moovetext1 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moovetext1 0.15s infinite; /* Opera 12+ */
+  animation:         moovetext1 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBarPerbis {
+  visibility:hidden;
+  position: absolute;
+  top:25%;
+  left: 70%;
+  height: 5vh;
+  width: 29%;
+  background-color: var(--pink);
+  -webkit-animation: moovetext2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    moovetext2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      moovetext2 0.15s infinite; /* Opera 12+ */
+  animation:         moovetext2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+.sideBarPerbis2 {
+  visibility:hidden;
+  position: absolute;
+  top:25%;
+  left: 70%;
+  height: 5vh;
+  width: 29%;
+  background-color: black;
+}
+.vegeta1 {
+  position: absolute;
+  visibility:hidden;
+  height: 650px;
+  width: 425px;
+  margin-left: -27%;
+  margin-top: 5vh;
+  background-image: url("VegetaBrush4.png");
+  background-position: top;
+  -webkit-animation: vegeta1 5s infinite; /* Safari 4+ */
+  -moz-animation:    vegeta1 5s infinite; /* Fx 5+ */
+  -o-animation:      vegeta1 5s infinite; /* Opera 12+ */
+  animation:         vegeta1 5s infinite; /* IE 10+, Fx 29+ */
+
+}
+.vegeta12 {
+  position: absolute;
+  visibility:hidden;
+  height: 650px;
+  width: 425px;
+  margin-left: -27%;
+  margin-top: 5vh;
+  background-image: url("VegetaBrush7.png");
+  background-position: top;
+  -webkit-animation: vegeta12 6s infinite; /* Safari 4+ */
+  -moz-animation:    vegeta12 6s infinite; /* Fx 5+ */
+  -o-animation:      vegeta12 6s infinite; /* Opera 12+ */
+  animation:         vegeta12 6s infinite; /* IE 10+, Fx 29+ */
+}
+.vegeta13 {
+  position: absolute;
+  visibility:hidden;
+  height: 650px;
+  width: 425px;
+  margin-left: -27%;
+  margin-top: 5vh;
+  background-image: url("VegetaBrush8.png");
+  background-position: top;
+  -webkit-animation: vegeta13 5.5s infinite; /* Safari 4+ */
+  -moz-animation:    vegeta13 5.5s infinite; /* Fx 5+ */
+  -o-animation:      vegeta13 5.5s infinite; /* Opera 12+ */
+  animation:         vegeta13 5.5s infinite; /* IE 10+, Fx 29+ */
+}
+.vegeta2 {
+  position: absolute;
+  visibility:hidden;
+  height: 650px;
+  width: 425px;
+  margin-left: -27%;
+  margin-top: 5vh;
+  background-image: url("VegetaBrush5.png");
+  background-position: top;
+  -webkit-animation: vegeta2 0.15s infinite; /* Safari 4+ */
+  -moz-animation:    vegeta2 0.15s infinite; /* Fx 5+ */
+  -o-animation:      vegeta2 0.15s infinite; /* Opera 12+ */
+  animation:         vegeta2 0.15s infinite; /* IE 10+, Fx 29+ */
+}
+@keyframes vegeta1 {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  30% {
+    opacity: 1;
+    margin-left: -27%;
+    margin-top: 5vh;
+  }
+  50% {
+    margin-left: -28%;
+    margin-top: 5vh;
+    opacity: 0.7;
+  }
+  55% {
+    opacity: 1;
+    margin-left: -27%;
+    margin-top: 5vh;
+  }
+  75% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 0.9;
+  }
+  80% {
+    opacity: 1;
+    margin-left: -27%;
+    margin-top: 5vh;
+  }
+  100% {
+    margin-left: -27%;
+    margin-top: 5vh;
+    opacity: 0.8;
+  }
+}
+@keyframes vegeta12 {
+  0% {
+    opacity: 0;
+  }
+  23% {
+    opacity: 0;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  25% {
+    opacity: 1;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  28% {
+    opacity: 0;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  50% {
+    margin-left: -28%;
+    margin-top: 5vh;
+    opacity: 0;
+  }
+  73% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 0;
+  }
+  75% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 1;
+  }
+  77% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: -27%;
+    margin-top: 5vh;
+    opacity: 0;
+  }
+}
+@keyframes vegeta13 {
+  0% {
+    opacity: 0;
+  }
+  23% {
+    opacity: 0;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  25% {
+    opacity: 1;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  28% {
+    opacity: 0;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  50% {
+    margin-left: -28%;
+    margin-top: 5vh;
+    opacity: 0;
+  }
+  73% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 0;
+  }
+  75% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 1;
+  }
+  77% {
+    margin-top: 5vh;
+    margin-left: -27%;
+    opacity: 0;
+  }
+  100% {
+    margin-left: -27%;
+    margin-top: 5vh;
+    opacity: 0;
+  }
+}
+@keyframes vegeta2 {
+  0% {
+    margin-left: -28%;
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+    margin-left: -26%;
+    margin-top: 5vh;
+  }
+  50% {
+    margin-left: -28%;
+    margin-top: 3vh;
+    opacity: 0.7;
+  }
+  75% {
+    margin-top: 4vh;
+    margin-left: -28%;
+    opacity: 0.9
+  }
+  100% {
+    margin-left: -24%;
+    margin-top: 2vh;
+    opacity: 0.8;
+  }
+}
+
+@keyframes moove {
+  0% {
+    margin-left: 10px;
+  }
+  25% {
+    margin-left: -15px;
+    margin-top: -20px;
+  }
+  50% {
+    margin-top: 10px;
+  }
+  75% {
+    margin-top: -10px;
+    margin-left: -15px;
+  }
+  100% {
+    margin-left: 10px;
+  }
+}
+@keyframes moove2 {
+  0% {
+    margin-left: -10px;
+  }
+  25% {
+    margin-left: 15px;
+    margin-top: 20px;
+  }
+  50% {
+    margin-top: -10px;
+  }
+  75% {
+    margin-top: 10px;
+  }
+  100% {
+    margin-left: -10px;
+  }
+}
+
+@keyframes moovetext1 {
+  0% {
+    margin-left: 1px;
+  }
+  25% {
+    margin-left: -1.5px;
+  }
+  50% {
+  }
+  75% {
+    margin-left: -1.5px;
+  }
+  100% {
+    margin-left: 1px;
+  }
+}
+@keyframes moovetext2 {
+  0% {
+    margin-left: -1px;
+  }
+  25% {
+    margin-left: 1.5px;
+  }
+  50% {
+  }
+  75% {
+  }
+  100% {
+    margin-left: -1px;
+  }
+}
+
+@keyframes mooveborder1 {
+  0% {
+    margin-left: 1px;
+    margin-top: 1px;
+  }
+  25% {
+    margin-left: -1.5px;
+  }
+  50% {
+    margin-top: -0.5px;
+  }
+  75% {
+    margin-left: -1.5px;
+    margin-top: 1px;
+  }
+  100% {
+    margin-left: 1px;
+  }
+}
+@keyframes mooveborder2 {
+  0% {
+    margin-left: -1px;
+  }
+  25% {
+    margin-left: 1.5px;
+  }
+  50% {
+    margin-top: 0.5px
+  }
+  75% {
+    margin-top: -1px;
+  }
+  100% {
+    margin-left: -1px;
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: black;
+  }
+  25% {
+    background-color: grey;
+  }
+  50% {
+    background-color:white;
+  }
+  75% {
+    background-color: grey;
+  }
+  100% {
+    background-color: black;
+  }
+}
+@keyframes colorText {
+  0% {
+    color: white;
+  }
+  25% {
+    color: grey;
+  }
+  50% {
+    color:black;
+  }
+  75% {
+    color: grey;
+  }
+  100% {
+    color: white;
+  }
+}
